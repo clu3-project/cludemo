@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useAccount } from 'wagmi'
 import { default as Captcha } from '../utils/captcha';
+import {config} from '../constants/Constants';
 import  clu3  from '../clu3';
 import styles from '../styles/Mint.module.css';
 
@@ -24,11 +25,11 @@ const Mint = () => {
             setTimestamp(Date.now().toString());
     }, [token]);
 
-    const useClu3 = async (e:any, token:any) => {
+    const onMint = async (e:any, token:any) => {
         // timestamp is generated on the client side each time a captcha is solved
         // address is the user's wallet address, which is gotten from the useAccount hook
         e.preventDefault();
-        let url = "http://localhost:8080/verify";
+        let url = config.url.API_URL + '/verify';
         let response = await clu3(token, url, address, timestamp)
         console.log(response)
         if (response?.success) {
@@ -57,7 +58,7 @@ const Mint = () => {
             <button 
                 form="captcha_form" 
                 value="Submit" 
-                onClick={async (e) => await useClu3(e, token)} 
+                onClick={async (e) => await onMint(e, token)} 
                 className={token ? styles.mint_btn : styles.mint_btn_disabled}
                 disabled={!token}
                 >
