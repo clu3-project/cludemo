@@ -29,7 +29,7 @@ const Mint = () => {
         // timestamp is generated on the client side each time a captcha is solved
         // address is the user's wallet address, which is gotten from the useAccount hook
         e.preventDefault();
-        let url = config.url.API_URL + '/verify';
+        let url = config.url.API_URL + 'verify';
         let response = await clu3(token, url, address, timestamp)
         console.log(response)
         if (response?.success) {
