@@ -1,0 +1,35 @@
+.mintContainer {
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mint_btn {
+    background: #0D76FC;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 1rem 1rem;
+    cursor: pointer;
+}
+
+.mint_btn_disabled {
+    background: lightgray;
+    border-radius: 10px;
+    border: none;
+    color: gray;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 1rem 1rem;
+    cursor: not-allowed;
+}
