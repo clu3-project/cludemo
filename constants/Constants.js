@@ -1,6 +1,6 @@
 const prod = {
     url: {
-        API_URL: 'https://api.clu3.io',
+        API_URL: 'https://clu3-service.herokuapp.com/',
     }
 }
 
