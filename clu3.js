@@ -1,4 +1,4 @@
-const clu3 = async (token, url, address, timestamp) => {
+const clu3 = async (token, url, address) => {
     
     if (!token) {
         return {
@@ -19,7 +19,6 @@ const clu3 = async (token, url, address, timestamp) => {
         body: JSON.stringify({
             token,
             senderAddress: address,
-            timestamp: timestamp,
         }),
 
     };
