@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <Explain />
         </>
       ):(
-        <div className={styles.main}>
+        <div className={styles.main} style={{"justifyContent":'center'}}>
           <div style={{"justifyContent":"center"}}>
           <div className={styles.card}>
           <h3 style={{'textAlign':'center'}}>Welcome to clu3🤖!</h3>
