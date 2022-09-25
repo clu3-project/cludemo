@@ -23,10 +23,10 @@ const Home: NextPage = () => {
         </>
       ):(
         <div className={styles.main}>
-          <div>
+          <div style={{"justifyContent":"center"}}>
           <div className={styles.card}>
           <h3 style={{'textAlign':'center'}}>Welcome to clu3🤖!</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti cupiditate odio ex quis perferendis, nobis aperiam soluta. Natus dignissimos magnam necessitatibus hic sapiente expedita, eveniet repudiandae repellat ipsam atque voluptatem.</p>
+          <p>Get Clu to get rid of the undesired bots putting hands on your smart contract!</p>
           </div>
           <Mint/>
           </div>
