@@ -42,9 +42,8 @@ const Mint = () => {
     };
 
     useEffect(() => {
-
         async function getClu3() {
-            let url = config.url.API_URL + '/verify';
+            let url = config.url.API_URL +  'verify';
             let response = await clu3(token, url, address)
             if (response?.success) {
                 setRes(response?.data);
