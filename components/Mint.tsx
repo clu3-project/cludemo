@@ -23,7 +23,7 @@ const Mint = () => {
     // const debouncedArgs = useDebounce(args);
 
     const { config: configSmartContract } = usePrepareContractWrite({
-        addressOrName: '0xDd566980c4908f25fabA0e7592E4180a7769f35c',
+        addressOrName: '0xdAd915937012Bd81326B11f1688681239F9521C1',
         contractInterface: new ethers.utils.Interface(abi),
         functionName: 'clu3Transaction',
         args: args
