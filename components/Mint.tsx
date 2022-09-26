@@ -23,13 +23,10 @@ const Mint = () => {
     // const debouncedArgs = useDebounce(args);
 
     const { config: configSmartContract } = usePrepareContractWrite({
-        addressOrName: '0x636e161711d3949e31c82fd8235dad01e88b9c69',
+        addressOrName: '0xDd566980c4908f25fabA0e7592E4180a7769f35c',
         contractInterface: new ethers.utils.Interface(abi),
-        functionName: 'cluPrototype',
-        args: [
-            "0xea4404dc56b83881b46b184a1160ece80d295dd241254a1134c8a01f3c19f47653ba665a36720f0eb0c72b32b3d346250cb3af28e5d75c96d96255a638641dee1b",
-        1663989265928
-    ]
+        functionName: 'clu3Transaction',
+        args: args
         // enabled: Boolean(debouncedArgs)
     })
 
@@ -51,7 +48,7 @@ const Mint = () => {
             let response = await clu3(token, url, address)
             if (response?.success) {
                 setRes(response?.data);
-                // setArgs([response?.data.timestamp, response?.data.messageSignature])
+                setArgs([response?.data.timestamp, response?.data.messageSignature])
             } else {
                 setError(response.error)
             }
